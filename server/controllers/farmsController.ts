@@ -13,9 +13,11 @@ exports.getFarms = (req: Request, res: Response) => {
 		});
 };
 
-exports.getFarm = async (req: { query: { name: string } }, res: Response) => {
-	const farmName = req.query?.name;
-	await knex('farms')
+exports.getFarm = (req: any, res: Response) => {
+	const farmName = req.params?.name;
+	knex
+		.select('*')
+		.from('farms')
 		.where('name', farmName)
 		.then((data: Measurement[]) => {
 			res.json(data);

@@ -10,10 +10,6 @@ const app = express();
 
 app.use(cors());
 app.use(helmet());
-//app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(bodyParser.json());
-//app.use(busboy({ immediate: true }));
-
 app.use('/farms', farmsRouter);
 
 app.use((err: { stack: any }, req: Request, res: Response, next: any) => {
@@ -22,7 +18,7 @@ app.use((err: { stack: any }, req: Request, res: Response, next: any) => {
 });
 
 app.use((_req: Request, res: Response, next: any) => {
-  res.status(404).send('404 Not Found"');
+  res.status(404).send('404 Not Found');
 });
 
 app.listen(PORT, () => {

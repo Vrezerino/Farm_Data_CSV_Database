@@ -34,7 +34,7 @@ const FarmPostForm = ({ onFileChange, onFileUpload }: Props) => {
 				<button
 					type='submit'
 					className="btn btnAdd">
-					Post CSV file
+					Upload CSV
 				</button>
 			</form>
 		</>

@@ -8,7 +8,7 @@ interface FarmNamesListRowUI {
 }
 
 const FarmListRow = (props: FarmNamesListRowUI) => {
-	const url = `${baseUrl}/farms/${props.farm}`;
+	const url = `${baseUrl}/farm/${props.farm}`;
 	return(
 		<tr className="tableRow">
 			<td className="tableItem">

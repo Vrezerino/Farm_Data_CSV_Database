@@ -71,6 +71,7 @@ export const App = () => {
 							</label>
 							<input
 								className="formInput"
+								name='fileInput'
 								type="file"
 								accept='text/csv'
 								onChange={onFileChange} />

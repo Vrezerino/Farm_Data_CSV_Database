@@ -1,0 +1,6 @@
+location,datetime,sensorType,value
+Test farm,2018-12-31T22:00:00.000Z,pH,7.17
+Test farm,2018-12-31T22:00:00.000Z,rainFall,0
+Test farm,2019-01-01T09:42:27.744Z,temperature,-23.0
+Test farm,2018-12-31T23:36:55.186Z,temperature,-28.3
+Test farm,2019-01-01T21:07:47.214Z,temperature,-28.2

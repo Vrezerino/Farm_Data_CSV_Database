@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 10px;
   background: #eee;
   font: 1rem / 1.414 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   color: #333;

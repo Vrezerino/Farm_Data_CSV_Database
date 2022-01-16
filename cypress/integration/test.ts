@@ -6,7 +6,7 @@ describe('Farm CSV database', () => {
 	});
 
 	it('A farm CSV file can be posted', () => {
-		cy.fixture('testPicture.png').then(fileContent => {
+		cy.fixture('testfarm.csv').then(fileContent => {
 			cy.get('input[type="file"]').attachFile({
 				fileContent: fileContent.toString(),
 				fileName: 'testfarm.csv',

@@ -31,7 +31,6 @@ export const App = () => {
 	};
 
 	const onFileUpload = async () => {
-		//e.preventDefault();
 		const formData = new FormData();
 		if (selectedFile) {
 			formData.append(

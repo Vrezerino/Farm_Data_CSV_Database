@@ -1,6 +1,6 @@
 import React from 'react';
 import FarmListRow from './FarmListRow';
-import './../styles/farmList.css';
+import '../styles/farmList.css';
 import { useStateValue } from '../state';
 
 interface FarmNameListUI {
@@ -10,8 +10,7 @@ interface FarmNameListUI {
 
 const FarmList = (props: FarmNameListUI) => {
 	const [{ farmList }] = useStateValue();
-	console.log(farmList);
-	if (props.loading) return <p>Loading...</p>;
+
 	return (
 		<table className="table">
 			<tbody className="tableBody">

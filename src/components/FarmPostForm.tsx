@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStateValue } from '../state';
+import '../styles/App.css';
 
 interface Props {
 	onFileUpload: () => void;
@@ -9,7 +10,7 @@ interface Props {
 const FarmPostForm = ({ onFileChange, onFileUpload }: Props) => {
 	const [{ notification }] = useStateValue();
 	return (
-		<div className="farmListWrapper">
+		<>
 			<h1>Farm Data CSV Database</h1>
 			<form className="farmListForm" onClick={onFileUpload}>
 				<div className="formWrapper">
@@ -36,7 +37,7 @@ const FarmPostForm = ({ onFileChange, onFileUpload }: Props) => {
 					Post CSV file
 				</button>
 			</form>
-		</div>
+		</>
 	);
 };
 

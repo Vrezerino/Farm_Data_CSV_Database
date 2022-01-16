@@ -56,13 +56,13 @@ export const App = () => {
 	};
 
 	return (
-		<>
+		<div className='farmListWrapper'>
 			<FarmPostForm
-			onFileChange={onFileChange}
-			onFileUpload={onFileUpload}/>
+				onFileChange={onFileChange}
+				onFileUpload={onFileUpload} />
 			<FarmListRow
 				farms={farmList}
 				handleFarmRemove={handleFarmRemove} />
-		</>
+		</div>
 	);
 };

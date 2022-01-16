@@ -15,12 +15,6 @@ const FarmList = (props: FarmNameListUI) => {
 	if (props.loading) return <p>Loading...</p>;
 	return (
 		<table className="table">
-			<thead>
-				<tr>
-					<th className="tableHeadItem" />
-					<th className="tableHeadItem">Name</th>
-				</tr>
-			</thead>
 			<tbody className="tableBody">
 				{farmList.length > 0 ? (
 					farmList.map((farm: string, i) => (

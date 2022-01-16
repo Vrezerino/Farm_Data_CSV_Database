@@ -6,22 +6,12 @@ describe('Farm CSV database', () => {
 	});
 
 	it('A farm CSV file can be posted', () => {
-		cy.get('input[name=fileInput]').type('Test Poster');
-		cy.get('input[name=title]').type('Test Title Goes Here!');
-		cy.get('textarea[name=content]').type('Lorem Ipsum Dolor');
-		cy.get('button').click();
-
-		cy.contains('Test Title Goes Here!');
-	});
-});
-
-
-it('Testing picture uploading', () => {
-	cy.fixture('testPicture.png').then(fileContent => {
+		cy.fixture('testPicture.png').then(fileContent => {
 			cy.get('input[type="file"]').attachFile({
-					fileContent: fileContent.toString(),
-					fileName: 'testfarm.csv',
-					mimeType: 'text/csv'
+				fileContent: fileContent.toString(),
+				fileName: 'testfarm.csv',
+				mimeType: 'text/csv'
 			});
+		})
 	});
 });

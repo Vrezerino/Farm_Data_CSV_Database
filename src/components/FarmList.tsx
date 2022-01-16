@@ -5,7 +5,6 @@ import { useStateValue } from '../state';
 
 interface FarmNameListUI {
 	farms: string[];
-	loading: boolean;
 	handleFarmRemove: (name: string) => void;
 }
 

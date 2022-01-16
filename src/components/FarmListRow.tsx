@@ -1,13 +1,13 @@
 import React from 'react';
 import { baseUrl } from '../utils';
 
-interface FarmNamesListRowUI {
+interface Props {
 	farm: string;
   position: number;
   handleFarmRemove: (name: string) => void;
 }
 
-const FarmListRow = (props: FarmNamesListRowUI) => {
+const FarmListRow = (props: Props) => {
 	const url = `${baseUrl}/farm/${props.farm}`;
 	return(
 		<tr className="tableRow">

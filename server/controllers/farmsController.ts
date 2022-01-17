@@ -43,9 +43,9 @@ exports.farmCreate = async (req: { file: { buffer: { toString: (arg0: string) =>
 	// Save each line in the CSV file into an array.
 	const bufferToString = req.file?.buffer.toString('utf8');
 	const lines = bufferToString?.split('\n');
-	const records: Measurement[] = [];
 
 	// Split each line/row by a comma or tab symbol.
+	const records: Measurement[] = [];
 	lines?.forEach((line: string) => {
 		const row = line.split(/[,|\t]/);
 		const newMeasurement = {

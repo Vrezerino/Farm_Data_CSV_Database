@@ -1,5 +1,5 @@
 import React from 'react';
-import { baseUrl } from '../utils';
+import { baseUrl } from '../../utils';
 
 interface Props {
 	farm: string;

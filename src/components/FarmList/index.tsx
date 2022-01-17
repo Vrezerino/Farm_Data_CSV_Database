@@ -1,14 +1,14 @@
 import React from 'react';
 import FarmListRow from './FarmListRow';
-import '../styles/farmList.css';
-import { useStateValue } from '../state';
+import '../../styles/farmList.css';
+import { useStateValue } from '../../state';
 
-interface FarmNameListUI {
+interface Props {
 	farms: string[];
 	handleFarmRemove: (name: string) => void;
 }
 
-const FarmList = (props: FarmNameListUI) => {
+const FarmList = (props: Props) => {
 	const [{ farmList }] = useStateValue();
 
 	return (

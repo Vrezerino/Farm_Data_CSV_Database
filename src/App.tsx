@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FarmPostForm from './components/FarmPostForm';
-import FarmListRow from './components/FarmList';
+import FarmList from './components/FarmList';
 import { farmDelete, farmPost, getAllFarms } from './services/farmService';
 import '../src/styles/App.css';
 
@@ -59,7 +59,7 @@ export const App = () => {
 			<FarmPostForm
 				onFileChange={onFileChange}
 				onFileUpload={onFileUpload} />
-			<FarmListRow
+			<FarmList
 				farms={farmList}
 				handleFarmRemove={handleFarmRemove} />
 		</div>

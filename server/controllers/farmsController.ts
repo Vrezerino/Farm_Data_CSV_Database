@@ -40,10 +40,12 @@ exports.getAllData = (_req: Request, res: Response) => {
 };
 
 exports.farmCreate = async (req: { file: { buffer: { toString: (arg0: string) => any } } }, res: Response) => {
+	// Save each line in the CSV file into an array.
 	const bufferToString = req.file?.buffer.toString('utf8');
 	const lines = bufferToString?.split('\n');
-
 	const records: Measurement[] = [];
+
+	// Split each line/row by a comma or tab symbol.
 	lines?.forEach((line: string) => {
 		const row = line.split(/[,|\t]/);
 		const newMeasurement = {
@@ -58,6 +60,7 @@ exports.farmCreate = async (req: { file: { buffer: { toString: (arg0: string) =>
 		}
 	});
 
+	// Save new measurement objects into the db in batches.
 	try {
 		await knex.batchInsert('farms', records, 100);
 		res.send('File uploaded successfully.');
@@ -75,7 +78,7 @@ exports.farmsDelete = async (req: any, res: Response) => {
 			res.json({ message: `Farm ${farmName} deleted.` });
 		})
 		.catch((e: Error) => {
-			res.json({ message: `Error deleting ${farmName} farm: ${e}` });
+			res.json({ message: `Error deleting ${farmName} farm: ${e.message}` });
 		});
 };
 
@@ -88,6 +91,6 @@ exports.farmsReset = async (_req: Request, res: Response) => {
 			res.json({ message: 'Farm list cleared.' });
 		})
 		.catch((e: Error) => {
-			res.json({ message: `Error resetting farm list: ${e}.` });
+			res.json({ message: `Error resetting farm list: ${e.message}.` });
 		});
 };

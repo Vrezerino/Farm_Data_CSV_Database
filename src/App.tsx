@@ -21,7 +21,7 @@ export const App = () => {
 
 	useEffect(() => {
 		void fetchFarms();
-	}, [getAllFarms]);
+	}, [fetchFarms]);
 
 	const onFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		if (event.target.files) {

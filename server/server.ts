@@ -12,12 +12,12 @@ app.use(cors());
 app.use(helmet());
 app.use('/farms', farmsRouter);
 
-app.use((err: { stack: any }, req: Request, res: Response, next: any) => {
+app.use((err: { stack: any }, req: Request, res: Response) => {
   console.error(err.stack);
   res.status(500).send('500 Server Error!');
 });
 
-app.use((_req: Request, res: Response, next: any) => {
+app.use((_req: Request, res: Response) => {
   res.status(404).send('404 Not Found');
 });
 
